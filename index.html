@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI 交易策略中心 | 視覺辨識辨識系統</title>
-    <meta name="description" content="基於 YOLOv8 深度學習的台股型態辨識系統。">
+    
+    <meta name="description" content="基於 YOLOv8 深度學習的台股型態辨識系統，自動監控 W 底、M 頭等關鍵轉折。">
+    <meta name="keywords" content="AI選股, K線辨識, 技術分析自動化, YOLOv8股票辨識">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <div class="nav-container">
             <span class="logo">AI <span class="gold-text">TRADING LAB</span></span>
@@ -20,7 +24,7 @@
 
     <div class="system-status">
         <span class="status-dot"></span>
-        <span id="update-time">AI 監控系統運行中...</span>
+        <span id="update-time">AI 監控系統運行中：數據同步處理中...</span>
     </div>
 
     <section id="performance" class="container">
@@ -49,19 +53,41 @@
         </div>
     </section>
 
+    <section id="chart-section" class="container">
+        <h2 class="section-title">📊 互動式行情分析</h2>
+        <div class="chart-wrapper">
+            <div id="tradingview_widget"></div>
+        </div>
+    </section>
+
+    <section id="ai-alerts" class="container">
+        <h2 class="section-title">🔥 即時視覺辨識結果 (W底成形)</h2>
+        <div id="stock-grid" class="grid">
+            <div class="loading-text">數據引擎載入中...</div>
+        </div>
+    </section>
+
     <section id="community" class="container">
         <h2 class="section-title">💬 交易員討論區</h2>
         <div class="comment-box">
-            <div id="auth-reminder">請先登入 Google 帳號即可參與討論</div>
+            <div id="auth-reminder" class="card">請先登入 Google 帳號即可參與討論</div>
+            
             <div id="comment-input-area" class="hidden">
                 <textarea id="comment-text" placeholder="分享您對今日 AI 標的的看法..."></textarea>
                 <button class="btn-gold" id="post-btn">發布留言</button>
             </div>
-            <div id="comments-display"></div>
+
+            <div id="comments-display">
+                </div>
         </div>
     </section>
 
+    <footer>
+        <p>&copy; 2026 AI Trading Lab. All Rights Reserved.</p>
+    </footer>
+
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    
     <script type="module" src="script.js"></script>
 </body>
 </html>
