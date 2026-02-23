@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 交易策略中心 | 視覺辨識辨識系統</title>
+    <meta name="description" content="基於 YOLOv8 深度學習的台股型態辨識系統。">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <span class="logo">AI <span class="gold-text">TRADING LAB</span></span>
+            <div class="user-auth">
+                <button id="login-btn" class="btn-outline">Google 登入</button>
+                <span id="user-info"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="system-status">
+        <span class="status-dot"></span>
+        <span id="update-time">AI 監控系統運行中...</span>
+    </div>
+
+    <section id="performance" class="container">
+        <h2 class="section-title">📈 AI 歷史戰績證明</h2>
+        <div class="performance-wrapper">
+            <table class="performance-table">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>代號</th>
+                        <th>偵測型態</th>
+                        <th>進場價</th>
+                        <th>波段最高漲幅</th>
+                    </tr>
+                </thead>
+                <tbody id="performance-body">
+                    <tr>
+                        <td>2026/02/10</td>
+                        <td>2330</td>
+                        <td>W底確認</td>
+                        <td>1020</td>
+                        <td class="gain-positive">+8.5%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="community" class="container">
+        <h2 class="section-title">💬 交易員討論區</h2>
+        <div class="comment-box">
+            <div id="auth-reminder">請先登入 Google 帳號即可參與討論</div>
+            <div id="comment-input-area" class="hidden">
+                <textarea id="comment-text" placeholder="分享您對今日 AI 標的的看法..."></textarea>
+                <button class="btn-gold" id="post-btn">發布留言</button>
+            </div>
+            <div id="comments-display"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
